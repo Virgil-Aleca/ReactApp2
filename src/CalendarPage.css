@@ -1,0 +1,155 @@
+.calendar-page {
+  padding: 20px;
+  background-color: #e9eff1; 
+  font-family: 'Roboto', sans-serif;
+  color: #333; 
+  transition: background-color 0.3s;
+}
+
+.selector-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background-color: #004d40; 
+  padding: 12px 15px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.selector-container select {
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.selector-container select:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.month-container {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+  vertical-align: top;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+th {
+  background-color: #00796b; 
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+td {
+  cursor: pointer;
+  background-color: #fafafa; 
+}
+
+td:hover {
+  background-color: #e0e0e0; 
+  transform: scale(1.02);
+}
+
+.note-display {
+  margin-top: 5px;
+  background-color: #ffffff;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+textarea {
+  width: calc(100% - 20px);
+  height: 50px;
+  box-sizing: border-box;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  resize: none;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+textarea.visible {
+  display: block;
+}
+
+textarea:focus {
+  border-color: #004d40;
+  outline: none;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #004d40;
+  transition: color 0.3s;
+}
+
+textarea::placeholder {
+  color: #aaa;
+}
+
+.footer {
+  padding: 12px;
+  background-color: #004d40;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .selector-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .selector-container select {
+    width: 100%;
+  }
+}
